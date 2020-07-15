@@ -5,15 +5,8 @@ var qs = require('querystring');
 var template = require('./lib/template.js');
 var path = require('path');
 var mysql = require('mysql');
+var db = require('./lib/db');
 
-var db = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'qhdks332',
-  database : 'opentutorials'
-});
-//접속 정보
-db.connect();
 //데이터베이스에 실제 접속
 
 var app = http.createServer(function(request,response){
